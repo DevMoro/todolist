@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="date"> 
+        <h2> Today is <span id="datetime"></span></h2>
+    
+       
+    </div>
+
+    <div id="welcomeTxt"><h2>Welcome Moro...Here are you projects! Good Luck!</h2><button id="addProjectBtn">Add Project</button></div>
+
+    <!-- Project Cards on page -->
+
+    <div id="row">
+       
+      </div>
+
+      <!-- Pop out overlay -->
+
+      <div id="projectInfoTab">
+        <button id="closeTab">X</button>
+          <div id="projectInfo">
+              
+          
+
+          
+          </div>
+          <div id="newTaskForm">
+            <form onsubmit="return addNewTask(this);">
+                <label for="task">Task: </label>
+                <input type="text" id="task" name="task"><br>
+                <label for="description">Description: </label>
+                <input type="text" id="description" name="description">
+                <input type="submit" value="Add Task">
+            </form>
+
+          </div>
+          
+      </div>
+
+      <!-- Pop out new project form -->
+
+    <div id ="newFormTab">
+        <button id="closeNewForm">X</button>
+        <div id="newProjectForm">
+            <h2>New Project</h2>
+
+            <p>Please fill in the following!</p>
+
+            <form id="projectForm" onsubmit="return update(this);">
+                <div class="form-row">
+                <label for="ptitle">Title: </label>
+                <input type="text" id="ptitle" name="ptitle"><br>
+                </div>
+              
+                <div class="form-row">
+                <label for="pdescription">Discription: </label>
+                <input type="text" id="pdescription" name="pdescription"><br>
+                </div>
+                <div class="form-row">
+                <label for="pdueDate">Due Date</label>
+                <input type="date" id="pdueDate" name="pdueDate"><br>
+                </div>
+                <div class="form-row">
+                <label for="high">High</label>
+                <input type="radio" id="high" name="priority">
+                <label for="low">Low</label>
+                <input type="radio" id="low" name="priority"><br>
+                <input id="submit" type="submit" value="submit">
+                </div>
+          
+                
+            </form>
+
+        </div>
+    </div>
+
+
+
+      <footer>
+          <h4>Created & Designed by Moro</h4>
+
+          <p><em>This Todo list was created as part of The Odin Project curriculum.</em></p>
+      </footer>
+
+
+
+
+
+      <script src="./index.js"></script>
+</body>
+</html>
